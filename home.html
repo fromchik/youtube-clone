@@ -1,31 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <nav class = "top-nav">
-        <div class="nav-left-section">
-            <button class="burger-menu">
-                <img src="image/icons/svg-gobblery.svg" alt="">
-            </button>
-            <div class="youtube-logo-section">
-                <a href="home.html" class="home-page-link"><img class="youtube-logo-img" src="image/icons/youtube-logo(1).svg" alt=""></a>
-                <p class="region">ua</p>
+
+<body style="padding-top: 130px; padding-left: 80px;">
+    <div class="nav-container">
+        <nav class="top-nav">
+
+            <div class="top-nav__section top-nav__section--left">
+                <button class="top-nav__burger-menu">
+                    <img class="top-nav__burger-menu__img" src="image/icons/svg-gobblery.svg" alt="">
+                </button>
+                <div class="top-nav__logo">
+                    <a href="home.html" class="top-nav__home-link">
+                        <img class="top-nav__logo__img" src="image/icons/youtube-logo(1).svg" alt="">
+                    </a>
+                </div>
+                <p class="top-nav__region">UA</p>
+            </div> 
+            <div class="top-nav__section top-nav__section--search">
+                <input class="top-nav__search-input" type="text" placeholder="Search">
+                <button class="top-nav__search-button top-nav__search-button--start">
+                    <img class="top-nav__search-button__img" src="image/icons/svg-gobblererwer.svg" alt="">
+                </button>
+                <button class="top-nav__search-button top-nav__search-button--voice">
+                    <img class="top-nav__search-button__img" src="image/icons/svg-gobblerwerwerwe.svg" alt="">
+                </button>
+            </div>
+            <div class="top-nav__section top-nav__section--right">
+                <button class="top-nav__upload-button">
+                    <img src="image/icons/svg-gobblerwerwer.svg" alt="" class="top-nav__upload-button__img">
+                </button>
+                <button class="top-nav__notification-button">
+                    <img src="image/icons/svg-gobblererwerw.svg" alt="" class="top-nav__notification-button__img">
+                </button>
+                <button class="top-nav__profile-button">
+                    <img src="image/photo/unnamed_002.jpg" alt="" class="top-nav__profile-button__img">
+                </button>
+            </div>
+        </nav>
+    </div>
+    <div class="category-bar">
+        <button class="category-bar__button category-bar__button--selected" onclick="selectCategory(this)">All</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Gaming</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Zenless Zone Zero</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Game engines</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Genshin Impact</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Honkai: Star Rail</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Scripting language</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">JavaScript</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Source code</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Music</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Mods</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Video game walkthroughs</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Minecraft modding</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Mixes</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Live</button>
+        <button class="category-bar__button" onclick="selectCategory(this)">Skills</button>
+    </div>
+
+    <div class="side-bar">
+        <a href="home.html">
+            <div class="side-bar__item">
+                <img class="side-bar__item-icon" src="image/icons/home.svg" alt="">
+                <p class="side-bar__item-text">Home</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="side-bar__item">
+                <img class="side-bar__item-icon" src="image/icons/shorts.svg" alt="">
+                <p class="side-bar__item-text">Shorts</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="side-bar__item">
+                <img class="side-bar__item-icon" src="image/icons/subcriptions.svg" alt="">
+                <p class="side-bar__item-text">Subscriptions</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="side-bar__item">
+                <img class="side-bar__item-icon" src="image/icons/you.svg" alt="">
+                <p class="side-bar__item-text">You</p>
+            </div>
+        </a>
+    </div>
+    <div class="video-section">
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
             </div>
         </div>
-        <div class="search-section">
-            <input class = "search-input" type="text">
-            <button class="start-search-button"><img class = "start-search-img" src="image/icons/svg-gobblererwer.svg" alt=""></button>
-            <button class="voice-search-button"><img class = "voice-search-img" src="image/icons/svg-gobblerwerwerwe.svg" alt=""></button>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
         </div>
-        <div class="nav-right-section">
-            <button class="upload-video-button"><img src="image/icons/svg-gobblerwerwer.svg" alt="" class="upload-video-image"></button>
-            <button class="notification-button"><img src="image/icons/svg-gobblererwerw.svg" alt="" class="notification-image"></button>
-            <button class="profile-button"><img src="image/photo/unnamed_002.jpg" alt="" class="profile-avatar"></button>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
         </div>
-    </nav>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="video-section__video-container">
+            <p class="video-section__video-container__video-preview--duration">12.05</p>
+                <img class="video-section__video-container__video-preview--img" src="image/photo/hq720_002.webp" alt="">
+            <div class="video-section__video-container__info">
+                <a href=""><img src="image/photo/unnamed_002.jpg" alt="" class="video-section__video-container__info--user-avatar"></a>
+                
+                <div class="video-section__video-container__info__text-info">
+                    <a href = '' class="video-section__video-container__info__text-info--title">Calamity Infernum, but I’m the GUNNER Class - FULL MOVIE</a>
+                    <a href = ''class="video-section__video-container__info__text-info--author-username">GitGudWO</a>
+                    <div class="video-section__video-container__info__text-info__watches-and-date">
+                        <p class="video-section__video-container__info__text-info__watches-and-date--text">20,000 views</p>
+                        <span class="separator">•</span>
+                        <p class="video-section__video-container__info__text-info__watches-and-date--date"> 10 days ago</p>
+                    </div> 
+                </div>
+                <a href="" class="video-section__video-container__info__text-info--three-dots"><img src="image/icons/three-dots.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        function selectCategory(element){
+    const buttons = document.querySelectorAll('.category-bar__button');
+    buttons.forEach(button => {
+        button.classList.remove('category-bar__button--selected');
+    });
+    element.classList.add('category-bar__button--selected');
+}
+    </script> -->
+
+    <script src="scripts/home.js"></script>
 </body>
+
 </html>

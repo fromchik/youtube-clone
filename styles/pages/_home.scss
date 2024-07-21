@@ -1,0 +1,165 @@
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--light-theme) !important;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1; // Ensure side-bar has a lower z-index
+
+    margin-top: 70px;
+
+    &__item{
+        margin-bottom: 14px;
+        margin-top: 14px;
+        overflow: hidden;
+        color: var(--default-text-color);
+
+        &-icon{
+            width: 24px;
+        }
+
+        &-text{
+            max-height: 1.4rem;
+            white-space: nowrap;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            
+        }
+
+    }
+}
+
+.video-section{
+    display: flex;
+    width: 100%;
+    padding-top: 24px;
+    position: relative; // Ensure video-section does not create a new stacking context
+    z-index: 1; // Ensure video-section has a lower z-index
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    img{
+        width: 25px;
+    }
+    
+    &__video-container{
+        z-index: 1;
+        position: relative;
+        margin-bottom: 40px;
+        margin-right: 10px;
+
+            
+            .video-section__video-container__video-preview--img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .video-section__video-container__video-preview--duration{
+                position: absolute;
+                bottom: 110px;
+                right: 10px;
+                padding: 5px;
+                border-radius: 4px;
+                background-color: rgba(0, 0, 0, 0.5) !important;
+                color: #fff;
+                font-family: 'Roboto';
+                font-size: 0.85rem;
+                max-width: calc(100% - 10px); 
+                max-height: calc(100% - 10px);
+                overflow: hidden; 
+                
+            }
+            
+            &__info{
+                display: flex; 
+                
+                &--user-avatar{
+                    width: 36px !important;
+                    border-radius: 50%;
+                    
+                    margin-right: 14px;
+                    margin-top: 12px;
+                    object-fit: cover;
+                    
+                }
+                
+                &__text-info{
+                    width: 100%;
+                    margin-top: 10px;
+                    &--title{
+                        display: block;
+                        text-decoration: none;
+                        max-height: 25px;
+                        overflow: hidden;
+                        color: black !important;
+                        font-size: 1rem;
+                        line-height: 1.4rem;
+                        font-family: var(--home-page-font);
+                        text-overflow: ellipsis;
+                        max-height: 4.4rem;
+                        font-weight: 500;
+                    }
+
+                    &--author-username{
+                        color: var(--video-gray-text-color) !important;
+                        text-decoration: none;
+                        overflow: hidden;
+                        font-family: 'Roboto', Arial, sans-serif;
+                        text-overflow: ellipsis;
+                        font-weight: 400px;
+                        display: block;
+                        padding-top: 5px;
+                        font-size: 0.9rem;
+                    }
+
+                    &__watches-and-date{
+                        display: flex;
+                        align-items: center;
+                        color: var(--video-gray-text-color);
+                        font-family: 'Roboto', Arial, sans-serif;
+                        font-size: 0.8rem;
+                        padding-top: 7px;
+                        margin-bottom: 5px;
+                    
+                        .separator{
+                            margin: 0 3px;
+                            font-size: 14px;
+                        }
+
+                        &--views{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                &--three-dots{
+                    margin-top: px;
+                    margin: 0 8px;
+                }
+            }
+
+        }
+    }
+
+@media (max-width: 1200px){
+    .video-section{
+        grid-template-columns: repeat(4 ,1fr);
+    }
+}
+
+@media (max-width: 900px){
+    .video-section{
+        grid-template-columns: repeat(3 ,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .video-section{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+}

@@ -1,1 +1,16 @@
-@import 'base/reset'
+@import 'base/reset.scss';
+@import 'base/base.scss';
+@import 'shared/var';
+@import 'pages/home';
+@import 'shared/_navbar';
+@import 'shared/_categories';
+
+.nav-container {
+    position: fixed;
+    z-index: 100000; 
+}
+
+.container {
+    position: relative; 
+    z-index: 99999; 
+}

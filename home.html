@@ -13,12 +13,12 @@
         rel="stylesheet">
 </head>
 
-<body style="padding-top: 130px; padding-left: 80px;">
+<body class="side-bar-padding"style="padding-top: 130px ">
     <div class="nav-container">
         <nav class="top-nav">
 
             <div class="top-nav__section top-nav__section--left">
-                <button class="top-nav__burger-menu">
+                <button class="top-nav__burger-menu" id = "top-nav-burger-menu">
                     <img class="top-nav__burger-menu__img" src="image/icons/svg-gobblery.svg" alt="">
                 </button>
                 <div class="top-nav__logo">
@@ -27,7 +27,7 @@
                     </a>
                 </div>
                 <p class="top-nav__region">UA</p>
-            </div> 
+            </div>
             <div class="top-nav__section top-nav__section--search">
                 <input class="top-nav__search-input" type="text" placeholder="Search">
                 <button class="top-nav__search-button top-nav__search-button--start">
@@ -47,10 +47,9 @@
                 <button class="top-nav__profile-button">
                     <img src="image/photo/unnamed_002.jpg" alt="" class="top-nav__profile-button__img">
                 </button>
-            </div>
         </nav>
     </div>
-    <div class="category-bar">
+    <div class="category-bar side-bar-padding" id = "category-bar">
         <button class="category-bar__button category-bar__button--selected" onclick="selectCategory(this)">All</button>
         <button class="category-bar__button" onclick="selectCategory(this)">Gaming</button>
         <button class="category-bar__button" onclick="selectCategory(this)">Zenless Zone Zero</button>
@@ -65,11 +64,127 @@
         <button class="category-bar__button" onclick="selectCategory(this)">Video game walkthroughs</button>
         <button class="category-bar__button" onclick="selectCategory(this)">Minecraft modding</button>
         <button class="category-bar__button" onclick="selectCategory(this)">Mixes</button>
-        <button class="category-bar__button" onclick="selectCategory(this)">Live</button>
+        <button class="category-bar__button" oncl ick="selectCategory(this)">Live</button>
         <button class="category-bar__button" onclick="selectCategory(this)">Skills</button>
     </div>
+    <div class="full-side-bar hidden" id = "full-side-bar">
+        <div class="full-side-bar__container ">
+            <a href="" class="full-side-bar__container__link full-side-bar-selected-category">
+                <img class="full-side-bar__container__link--img" src="image/icons/home.svg" alt="">
+                <p class="full-side-bar__container-link--text">Home</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/shorts.svg" alt="">
+                <p class="full-side-bar__container-link--text">Shorts</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/subcriptions.svg" alt="">
+                <p class="full-side-bar__container-link--text">Subscriptions</p>
+            </a>
+            <div class="gray-line"></div>
+        </div>
+        <div class="full-side-bar__container">
+            <h1 class="full-side-bar__container--title">You</h1>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/your-chanel.svg" alt="">
+                <p class="full-side-bar__container-link--text">Your channel</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/history.svg" alt="">
+                <p class="full-side-bar__container-link--text">History</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/playlist.svg" alt="">
+                <p class="full-side-bar__container-link--text">Playlists</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/your-videos.svg" alt="">
+                <p class="full-side-bar__container-link--text">Your videos</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/watch-later.svg" alt="">
+                <p class="full-side-bar__container-link--text">Watch Later</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/liked-videos.svg" alt="">
+                <p class="full-side-bar__container-link--text">Liked videos</p>
+            </a>
+            <div class="gray-line"></div>
+        </div>
+        <div class="full-side-bar__container">
+            <h1 class="full-side-bar__container--title">Explore</h1>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/trending.svg" alt="">
+                <p class="full-side-bar__container-link--text">Trending</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/music.svg" alt="">
+                <p class="full-side-bar__container-link--text">Music</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/films.svg" alt="">
+                <p class="full-side-bar__container-link--text">Films</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/gaming.svg" alt="">
+                <p class="full-side-bar__container-link--text">Gaming</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/news.svg" alt="">
+                <p class="full-side-bar__container-link--text">News</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/sport.svg" alt="">
+                <p class="full-side-bar__container-link--text">Sport</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/learning.svg" alt="">
+                <p class="full-side-bar__container-link--text">learning</p>
+            </a>
+            <div class="gray-line"></div>
 
-    <div class="side-bar">
+        </div>
+        <div class="full-side-bar__container">
+            <h1 class="full-side-bar__container--title">More from YouTube</h1>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/youtube-premium.svg" alt="">
+                <p class="full-side-bar__container-link--text">YouTube Premium</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/youtube-studio.svg" alt="">
+                <p class="full-side-bar__container-link--text">YouTube Studio</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/youtube-music.svg" alt="">
+                <p class="full-side-bar__container-link--text">YouTube Music</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/youtube-kids.svg" alt="">
+                <p class="full-side-bar__container-link--text">YouTube Kids</p>
+            </a>
+            <div class="gray-line"></div>
+        </div>
+        <div class="full-side-bar__container">
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/settings.svg" alt="">
+                <p class="full-side-bar__container-link--text">Settings</p>
+            </a> 
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/report.svg" alt="">`
+                <p class="full-side-bar__container-link--text">Report history</p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/help .svg" alt="">
+                <p class="full-side-bar__container-link--text">Help </p>
+            </a>
+            <a href="" class="full-side-bar__container__link">
+                <img class="full-side-bar__container__link--img" src="image/icons/send-feedack.svg" alt="">
+                <p class="full-side-bar__container-link--text">Send feedback</p>
+            </a>
+
+        </div>
+    </div>
+    <div class="side-bar" style="" id = "side-bar">
         <a href="home.html">
             <div class="side-bar__item">
                 <img class="side-bar__item-icon" src="image/icons/home.svg" alt="">

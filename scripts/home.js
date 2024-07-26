@@ -41,3 +41,23 @@ async function loadVideos() {
 }
 
 loadVideos();
+
+const burgerMenu =document.getElementById('top-nav-burger-menu') 
+burgerMenu.addEventListener('click', () => {
+    const categoryBar = document.getElementById('category-bar')
+    const sidebar = document.getElementById('side-bar')
+    const fullSidebar = document.getElementById('full-side-bar')
+
+    if (fullSidebar.classList.contains('hidden')) {
+        sidebar.classList.add('hidden')
+        fullSidebar.classList.remove('hidden')
+        categoryBar.classList.replace('side-bar-padding', 'full-side-bar-padding')
+        document.body.classList.replace('side-bar-padding', 'full-side-bar-padding')
+    }else if (sidebar.classList.contains('hidden')){
+        sidebar.classList.remove('hidden')
+        fullSidebar.classList.add('hidden')
+        categoryBar.classList.replace('full-side-bar-padding', 'side-bar-padding')
+        document.body.classList.replace('full-side-bar-padding', 'side-bar-padding')
+    }
+
+})

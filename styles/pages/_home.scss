@@ -146,20 +146,90 @@
         }
     }
 
-@media (max-width: 1200px){
-    .video-section{
-        grid-template-columns: repeat(4 ,1fr);
+@media (max-width: 1200px) {
+    .video-section {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 900px){
-    .video-section{
-        grid-template-columns: repeat(3 ,1fr);
+@media (max-width: 900px) {
+    .video-section {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 600px){
-    .video-section{
-        grid-template-columns: repeat(2 ,1fr);
+@media (max-width: 600px) {
+    .video-section {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.full-side-bar {
+    background-color: var(--light-theme) !important;
+    width: 216px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 80px); // Изменено для учета отступа сверху
+    overflow-y: auto; // Убедитесь, что вертикальная прокрутка включена
+    padding-bottom: 40px; // добавлено для создания отступа внизу
+
+    &__container {
+        border-bottom: 1px solid var(--search-bar-border) !important;
+        margin-top: 12px;
+        padding-top: 12px;
+        padding: 12px;
+
+        .full-side-bar__container--title {
+            display: block;
+            padding-left: 12px;
+            padding-bottom: 6px;
+            font-family: "Roboto","Arial",sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+        &__link {
+            height: 40px;
+            display: flex;
+            padding:  0 12px;
+            flex-direction: row;
+            cursor: pointer;
+            outline: 0;
+            align-items: center;
+            border-radius: 6px;
+            text-decoration: none;
+
+            &--img {
+                width: 24px;
+                height: 24px;
+                margin-right: 20px;
+            }
+
+            p {
+                
+                white-space: nowrap;
+                line-height: 2rem;
+                font-size: 0.9rem;
+                font-weight: 400;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: black !important;
+            }
+        }
+    }
+}
+
+.full-side-bar-selected-category {
+    background-color: #e9e9e9 !important;
+}
+.full-side-bar-padding{
+    margin-left: 230px;
+}
+.side-bar-padding{
+    margin-left: 90px;
 }

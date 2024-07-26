@@ -14,7 +14,7 @@ export function timeSince(date) {
     if (hours > 0) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
     if (minutes > 0) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
     return 'Just now';
-}
+} 
 
 export function viewsRound(views){
     if(views > 1000000){
